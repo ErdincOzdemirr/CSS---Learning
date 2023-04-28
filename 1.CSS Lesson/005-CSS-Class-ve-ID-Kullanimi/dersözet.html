@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CLASS VE ID</title>
+        <style>
+            p {
+                color: red;
+                }
+            .text-red{
+                color:red;
+                }
+            .h-green {
+                color:green;
+                }
+            .h-blue{
+                color:blue;
+                }
+            .thick{
+                font-style: italic;
+                }
+            .intro{
+                color:pink;
+                }
+            #main-title{
+                color:red;
+                }
+
+        </style>
+    </head>
+    <body>
+        <h1>Class ve ID Kullanımı</h1>
+    Web sayfamızı oluştururken HTML elementlerimize bazı stil özellikleri eklemek isteriz. Bazı yazıların renkli, bazı resimlerin küçük veya bazı butonların farklı şekilde olması gerekebilir ve biz de bunun için CSS kullanırız.
+    <p>Bugün kodluyoruz</p>
+    <p>Yarın da kodluyoruz<p>
+        <hr>
+        class Kullanımı
+        Class seçicisi, HTML üzerinde aynı class’a sahip elemana ulaşmamızı sağlar.
+        
+        Class seçicisi CSS’de . ile belirtilir.
+        <!-- .class{ 
+            özellikler
+       }
+       <h4>Birinci Başlık</h4>
+       <h4>İkinci Başlık</h4>
+       <h4>Üçüncü başlık</h4>
+       -->
+        <h4>Birinci Başlık</h4>
+        <h4 class="text-red">İkinci Başlık</h4>
+        <h4>Üçüncü Başlık</h4>
+
+        <!-- yukarıda style bölümünde .text-red diyerek kılas tanımlaması yaptık ve ardından {} içine özelliğimizi yazdık -->
+<hr>
+        <p> Bir class’ı birden fazla HTML elementi için kullanabiliriz.</p>
+        <h4>Birinci Başlık</h4>
+        <h4 class="h-green">İkinci Başlık</h4>
+        <h4 class="h-green">Üçüncü Başlık</h4>
+
+<hr>
+       <p>Eğer bir HTML elementinin birden fazla class özelliğine sahip olmasını istiyorsak aynı anda iki farklı class’ı kullanabiliriz. Bunun için sadece iki class arasına boşluk bırakmak yeterli olacaktır.</p>
+        <h4>Birinci Başlık</h4>
+        <h4 class="h-blue">İkinci Başlık</h4>
+        <h4 class="h-blue thick">Üçüncü Başlık</h4>
+<hr>
+       <p>Bir HTML elementi kendini kapsayan elementin (parent elementi) stil özelliklerine sahip olur.</p>
+       <div class="intro">
+            <p>Birinci Paragraf</p><p>İkinci Paragraf</p>
+       </div>
+<hr>
+       <h1>id Kullanımı</h1>
+       <p>
+        D seçicisi, HTML üzerinde aynı id’ye sahip elemana ulaşmamızı sağlar.
+
+        ID seçicisi CSS’de # ile belirtilir.
+
+        ID seçicisinin kullanım amacı olarak class seçicisinden bir farkı yok diyebiliriz. İkisi de belirli HTML elementlerine CSS özellikleri eklemeye yöneliktir. Fakat id seçicisinin class seçicisinden bazı farkları vardır.
+       </p>
+       <!-- #id {özellikler } Bir id’yi sadece bir HTML elementi üzerinde kullanabiliriz. id belirtileceği zaman css kısmında # ile belirtmeyi unutma-->
+        <h4 id="main-title">Birinci Başlık</h4>
+        <h4>İkinci Başlık</h4>
+        <hr>
+        Aşağıdaki yanlış bir  ID kullanımdır!
+
+        <p id="title">Birinci paragraf</p>
+        <p id="title">İkinci paragraf</p>
+        Bir html elementinin sadece bir tane id’si olabilir.
+
+        Aşağıdakiler yanlış kullanımlardır.
+        <p id="title" id="text-green">Birinci paragraf</p>
+        <p id="title text-blue">İkinci paragraf</p>
+        Böyle kullanımlar geçerli değildir.
+    </body>
+</html>
