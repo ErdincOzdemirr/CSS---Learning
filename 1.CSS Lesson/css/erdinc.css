@@ -1,0 +1,15 @@
+body {background-color: bisque}
+.firstDiv {
+border: 7px outset gold;
+background-color: lightblue;
+text-align: center
+}
+p {
+color: green;
+font-size: 20px
+}
+
+h2 {
+    color: red;
+    font-size: 20px;
+}

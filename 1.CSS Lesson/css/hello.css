@@ -5,3 +5,5 @@ color: property (özelliktir)
 red; value (değerdir)
 css kodu ; ile biter devamında yeni bir css koduyla devam edilebilir*/
 h1 {color: red; font-size: 20px;}
+body { background-color:deepskyblue ; }
+.firstDiv, .secondDiv, .thirdDiv { border: 7px outset gold; background-color: lightblue; text-align: center; }
