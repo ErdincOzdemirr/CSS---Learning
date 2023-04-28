@@ -1,0 +1,7 @@
+h1 {color: red;}
+/* h1 {color: red;} 
+h1 selector dür. css uygulanması istediğimiz id class element bu bölüme yazılır. 
+color: property (özelliktir)
+red; value (değerdir)
+css kodu ; ile biter devamında yeni bir css koduyla devam edilebilir*/
+h1 {color: red; font-size: 20px;}
