@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Css Seçiciler</title>
+        <link rel="stylesheet" href="css/kodluyoruz.css" type="text/css">
+        <style>
+            h2{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <p>
+                CSS Seçiciler ile Çalışmak, İstediğimiz HTML Etiket Yapısına Özellik Ekleyebilmek
+          CSS seçiciler, HTML taglarına ulaşarak biçim atamaları yapmamızı sağlar. CSS işlemleri, HTML tagı içinde style attribute kullanarak yani inline, head arasında style tagı kullanarak yani internal ya da dosya uzantısı .css olan bir dosya oluşturup bu dosyayı head arasına ekleyerek yani external şekilde kullanabiliriz.
+              </p>
+          <!-- inline çalışma tagın içinde olur -->
+          <h1 style="color: orange;">Turuncu Başlık</h1>
+          <!-- internal çalışma için html sayfasının head tagına <style> eklenir -->
+            <h2>
+                Kırmızı Başlık
+            </h2>
+        <!-- External çalışmak için css kodlarımızı ayrı css sayfamıza yazarız -->
+            <h3>
+                Mavi Başlık
+            </h3>
+        <!-- Genel seçici * etiketidir. Bu seçici ile tüm etiketlere css uygula deriz. *{ margin:0; padding:0;}  Margin, bir elementin kenarlığının (border) etrafındaki boşluktur. Padding ise bir elementin kenarlığı ile içeriği arasındaki boşluktur. Başka bir deyişle, margin bir elementin dışındaki boşluğu kontrol eder. Padding ise bir elementin içindeki boşluğu kontrol eder.-->
+<br>
+        <!-- div *{color: green;} ile tüm div etiketleri içindeki rengi yeşil yapar -->
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nemo.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, adipisci!
+            </p>
+        </div>
+        <div>
+            <p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, sapiente.</p>
+            </p>
+        <!-- element seçiciler (element selector) 
+        Bu seçiciler ile doğrudan html etiketine css uygulanır. div{background-color: pink} tüm div etiketleri arka planı pembe olur-->
+            <p>
+                <p>Aliquam error ipsa officia tempore sit quibusdam perferendis tenetur. Fuga.</p>
+            </p>
+        </div>
+        <hr>
+        <br>
+        <br>
+
+        <!-- Sınıf seçiciler (Class Selectors) 
+        Bu seçiciler ile sınıf atadığımız etiketlere CSS uygulayabliriz. Sınıf ismine erişmek için sınıf isminin başına .konur. ex: <div class="turuncu">Arka rengim turuncu</div> turuncu class ın arka rengini turuncu yapar-->
+        <div class="turuncu">Arka rengim turuncu</div>
+        <p class="mavi">Arka rengi turuncu paragraf</p>
+        <br>
+        <hr>
+        <br>
+        <!-- Id Seçiciler (Id Selectors)
+Bu seçiciler ile id atadığımız elementlere CSS uygulayabiliriz. Id' ler tek bir elemente ait olmalıdırlar. Id özelliğine erişmek id' nin başına # ekliyoruz.  -->
+        <div id="erdinc">yazı rengim mor olsun</div>
+        <br>
+        <hr>
+        <br>
+        <!-- Özellik Seçiciler (Attribute Selectors)
+Bu seçiciler ile özelliğini belirttiğimiz elementlere CSS uygulayabiliriz. Özelliğin içi boş olsada element bundan etkilenecektir. Özelliklere erişmek için yapmamız gereken tek şey köşeli parantezler içinde özelliğin ismini [attribute] şeklinde yazıyoruz.
+
+[name]{ color: orange; }
+<button name="">gönder</button>
+<ul>
+      <li name="html">HTML</li>
+      <li name="css">CSS</li>
+</ul>
+Bu şekilde name attribute alan tüm elementler etkilenir. -->
+        <button name="">gönder</button>
+        <ul>
+            <li name="html">HTML</li>
+            <li name="css">CSS</li>
+        </ul>
+        </p>
+        <br>
+        <hr>
+        <br>
+        <p>
+            <!-- div[title="deneme"] { background-color: blue; } title deneme olan etiketlerin arka rengini değiştirir. Burada tam eşleşen özelliğe CSS uyguladık. Büyük-küçük harf duyarlılığı vardır.-->
+            <div title="Deneme">Lorem, ipsum dolor.</div>
+            <div title="deneme">Lorem, ipsum dolor.</div>
+            <div name="denemefalan">Lorem, ipsum.</div>
+        </p>
+        <br>
+        <hr>
+        <br>
+        <p>
+            <!-- Burada ~= ifadesi ile title özelliği "isim" içeren divlere eriştik. div[title~="isim"] { color: orange; }-->
+            <div title="isim">Lorem, ipsum dolor.</div>
+            <div title="isimler">Lorem, ipsum dolor.</div>
+            <div title="isim ve şehirler">Lorem, ipsum dolor.</div>
+        </p>
+        <br>
+        <!-- Burada ^= ifadesi ile href özelliği "https" ile başlayan a etiketlerine eriştik. a[href ^= "https"] { color: palegreen; }  
+-->     <a href="https://www.google.com/">google</a>
+        <a href="https://github.com/">github</a>
+        <a href="http://github.com/">github</a>
+<br>
+        <!-- Burada *= ifadesi ile href özelliği "one" içeren a etiketlerine eriştik a[href *= "one"] { color: red; }-->
+        <a href="onesss://www.google.com/">google</a>
+        <a href="ones://github.com/">github</a>
+        <a href="one://github.com/">github</a> 
+<br>
+<br>
+<br>
+        <!-- div[class$="test"] { background: yellow; } Burada $= ifadesi ile class özelliği sonunda "test" içeren divlere eriştik. -->
+        <div class="bir_test">Lorem, ipsum dolor.</div>
+        <div class="iki_test">Lorem, ipsum dolor.</div>
+        <div class="üc_test">Lorem, ipsum dolor.</div>
+        <div class="dört_test">Lorem, ipsum dolor.</div>
+<br>
+<br>
+<br>
+        <!-- a[href*="a"][href$="b"] { color: green; } Burada a ile başlayan ve sonunda b olan a etiketlerine eriştik. -->
+
+        <a href="a://www.google.b"> Google</a>
+        <a href="a://reactjs.b">github</a>
+        <a href="a://css-tric.b">getir</a>
+<br>
+        <!-- Grup Seçiciler (Group Selectors)
+Çoğunlukla etiketlere verilen CSS özellikleri benzer veya ortak olabilir. Bu gibi durumlarda seçicileri gruplayarak daha temiz CSS dosyaları oluşturabiliriz. h4,h5,h6{ color:purple; } tüm h456 etiketlerine ulaşmış oluruz -->
+            <h4>deneme 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, sint?
+            </h4>
+            <h5>deneme 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, alias?</h5>
+            <h6>deneme 6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ut.</h6>
+<br>
+        <!-- Çocuk seçiciler (Child Selectors)
+Artık etiketleri birbiriyle olan hiyerarşik durumuna göre seçerek CSS özelliklerini belirleyeceğiz. Child selector, kendisi ve kendisini sarmalayan bir üst etiketle olan ilişkiyi gösterir ve > işareti ile ifade edilir. 
+p > span{ color:orange; }
+p > span >b{ color:blue; }
+div > ul >li#first{ color:red; } -->
+        <p>
+            <span>child element</span>
+        </p>
+        <p>
+            <span>Burası turuncu renk
+                <b>Burasıda mavi renk olsun</b>
+            </span>
+        </p>
+        <div>
+            <ul>
+                <li id="first">bir</li>
+                <li>iki</li>
+            </ul>
+        </div>
+<hr>
+<!-- Torun-Soy Seçiciler (Descentad Selectors)
+Bir kapsayıcı yani parent element altındaki tüm etiketlere ulaşmak için kullanılır. Her ulaşılacak etiket arasına boşluk konulur. 
+div p{ background-color:blue; } Burada div içinde olan tüm p etiketlerine ulaşırız.
+
+-->
+        <div>
+            <ul>
+                <li>
+                    <p>Bu p etiketinin arkası mavi olacak</p>
+                </li>
+            </ul>
+            <p>Bu p etiketinin arkası mavi olacak</p>
+        </div>
+
+        <hr>
+        <!-- Genel Kardeş Seçiciler (General Sibling Selectors)
+Aynı parent etikete sahip olan ve birbiri ardına gelen etiketleri seçmek için kullanılır. AltGr+ü Kambinasyonuyla oluşan ~ işareti ile gösterilir. ul ~p {color: orange;} Burada dikkat edilmesi gereken iki nokta var. Birincisi <p> etiketi <ul> etiketinden sonra gelmeli (arada başka etiketler olabilir) ve ikiside aynı düzeyde yani aynı parent etiketine sahip olmalılar.-->
+        <div>
+            <p>siyah renk olacak</p>
+            <ul>
+                <li>
+                    <p>burası siyah olacak</p>
+                </li>
+            </ul>
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Bu p etiketi turuncu renk olacak.</p>
+        </div>
+<!-- 
+        Bitişik Kardeş Seçiciler (Adjacent Sibling Selector)
+        Genel kardeş seçiciden tek farkı belirtilen etiketler bitişik arka arkaya gelmeliler. + işareti ile gösterilir. ul + p {color:green;}-->
+        <div>
+            <p>
+                Lorem, ipsum dolor.
+            </p>
+            <ul>
+                <li>
+                    <p>Lorem, ipsum.</p>
+                </li>
+            </ul>
+            <p>Bu p etiketinin yazı rengi yeşil olsun</p>
+        </div>
+<!-- :first-child
+İlk child etikete CSS uygulanır.
+
+ul > li:first-child { color: orange; }
+<ul>
+<li>lorem</li>
+  <li>lorem</li>
+  <li>lorem</li>
+  <li>lorem</li>
+</ul> 
+:last-child
+Son child etikete CSS uygular.
+ul > li:last-child { color: orange; }-->
+    </body>
+    <ul>
+        <li>Burası kırmızı olsun</li>
+        <li>Lorem, ipsum dolor. </li>
+        <li>Lorem, ipsum dolor.</li>
+    </ul>
+</html>
+

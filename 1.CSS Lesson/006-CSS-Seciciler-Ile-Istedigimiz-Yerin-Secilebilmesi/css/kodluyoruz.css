@@ -14,16 +14,17 @@
     color:aqua;
 } */
 
-/*
+/* liste elemanlarından 1 - 3 - 5 tek elemanları etkiler
 li:nth-child(odd){
      color: red;
 }
-
+liste elemanlarından 2 - 4 - 6 tek elemanları etkiler
 li:nth-child(even){
         color: blue;
 } */
-
-li:nth-child(3n) {
+/* li nth child 3n - 3 ün katlarını etliler */
+/* 2n ise 2 nin katlarını etkiler */
+/* li:nth-child(3n) {
   color: red;
 }
 
@@ -31,10 +32,6 @@ li:nth-child(3n) {
   color: blue;
   font-weight: normal;
 }
-
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
@@ -68,3 +65,60 @@ p {
 .fs-30 {
   font-size: 30px;
 }
+
+h3 {
+  color: blue;
+} */
+/* *{ margin:0; padding:0;} */
+
+/* div *{
+  color: green;
+}
+
+div{
+  background-color: pink
+} */
+/* p.mavi = hem paragrafa hem de mavi isimli class a css uygulanır. */
+/* p.mavi{
+  color: blue; background-color: orange;
+}
+.turuncu {
+  background-color: orange;
+}
+#erdinc {
+  color: purple;
+}
+[name]{
+  color: red;  
+}
+div[title="deneme"] {
+  background-color: blue; 
+}
+div[title~="isim"] {
+  color: orange; 
+}
+a[href ^= "https"] { 
+  color: blue; 
+}
+
+a[href *= "one"] {
+   color: red;
+   }
+div[class$="test"] {
+   background: yellow;
+   }
+a[href*="a"][href$="b"] {
+   color: green;
+   } */
+/* p>span{color: orangered;}
+p>span>b{color: blue;}
+div>ul>li#first{color: red;} */
+
+/* div p {
+  background-color: blue; color: yellow;
+} */
+
+/* ul ~ p {color: orangered;} */
+/* ul+p {color: green;} */
+ul>li:first-child {color: red;}
+ul>li:last-child {color: green;}
