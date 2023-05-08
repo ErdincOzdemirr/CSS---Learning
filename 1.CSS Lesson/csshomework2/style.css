@@ -7,6 +7,7 @@ body {
     width: 90%;
     border: 0;
     margin-left: 50px;
+    text-align: center;
 }
 /* table içerisindeki ilk satırın boyutu ve dış boşluk stili */
 .box2  {
@@ -25,7 +26,7 @@ body {
     height: 80px;
 }
 .box5{
-    text-align: right;
+    text-align: center;
     background-color: #62B3AA;
     height: 80px;
 }
