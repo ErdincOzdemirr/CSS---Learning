@@ -33,5 +33,35 @@
         </div>
       </div>
     </div>
+    <hr>
+    <hr>
+
+CSS Kutu Özellikleri(Margin, Padding, Width, Height) Kullanımı
+CSS kutu özelliklerini iyi kavrayabilmek ve kullanabilmek için "kutu model" konusunu incelemek gerekir. Gelin önce "kutu modeli" konusuna bakalım.
+
+
+
+CSS Kutu Modeli
+<img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-kutu-ozelliklerimargin%2C-padding%2C-width%2C-height-kullanimi/figures/box.png" alt="box alıştırma"  width="1200">
+
+Resimde Kodluyoruz'un anasayfasını görüyoruz. İşaretlediğim alanlar birer HTML elementleri ve bir yapıyı oluşturan lego parçalarından sadece birkaçı. Kutu denmesinin sebebi de bir bütünü oluşturan lego parçaları veya kutu gibi olması. Bu kutuların aralarında mesafelerin ve içeriklerinin de kendi aralarında bir düzen olduğunu görmekteyiz. Bunun sebebi "kutu özelliklerinin" kullanılıyor olması. Özellikle yeşil kutuların içindeki yazıların belli bir mesafede olmasından ve çizdiğim yeşil hatlara değmemesinden anlayabiliriz.
+
+Burada kutu modelini şema halinde göstereceğim:
+
+<img src="https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-kutu-ozelliklerimargin%2C-padding%2C-width%2C-height-kullanimi/figures/boxmodel_.png" alt="boxmodel">
+
+Kutu modeli margin,padding,border ve içerikten oluşur.
+
+İçerik(content): Elementin içinde olan resim, ses ya da yazıdır.
+Padding: İçerik ile border arasında olan boşluk.
+Border: Padding ile margin'i ayıran sınırdır.
+Margin: Kutunun diğer kutularla arasındaki mesafeyi ayarlayan boşluk.
+Yukarıda saydığım kavramların dışında kutunun boy ve uzunluğunu belirleyen width ve height kavramları vardır. Bunları da alıştırmalarımızda göstermeye çalışacağım.
+
+width ve height
+width ve height özellikleri ile elementin, yani lego parçamızın boy ve genişliğini ayarlayabiliriz. Bu özellikleri biz yazmadığımız takdirde tarayıcı kendisi ayarlar ve yapacağımız web uygulamasında istenmeyen sonuçlara neden olur :)Bu özellikleri px, em veya % ile kullanabiliriz. % ile kullandığımız zaman elementimiz hangi elementin içindeyse ona göre oranlanır. Yani 800px boyunda bir <div> tag'inin içinde bulunan bir elementin boyunu 50% olarak ayarlarsanız elementin boyu 400px olur.
+
+Max-width özelliği ise bir elementin genişliğini sınırlamak istediğimizde kullanırız. Diyelim ki bir element tarayıcı ekranından fazla geniş veya uzun. Bu durumda scrollbar(kaydırma çubuğu) çıkar.
   </body>
 </html>
+ 
